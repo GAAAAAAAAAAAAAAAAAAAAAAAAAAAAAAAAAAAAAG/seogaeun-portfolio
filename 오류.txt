@@ -1,9 +1,13 @@
-Failed to compile.
-./app/layout.tsx:1:8
-Type error: Cannot find module or type declarations for side-effect import of './globals.css'.
-> 1 | import './globals.css';
-    |        ^
-  2 |
-  3 | export const metadata = {
-  4 |   title: '서가은 - 게임 개발자 포트폴리오',
-Error: Command "npm run build" exited with 1
+C:\Users\서가은\seogaeun-portfolio>npm run build
+
+> seogaeun-portfolio@1.0.0 build
+> next build
+
+  ▲ Next.js 14.2.3
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types  ...Failed to compile.
+
+Type error: Option 'baseUrl' is deprecated and will stop functioning in TypeScript 7.0. Specify compilerOption '"ignoreDeprecations": "6.0"' to silence this error.
+  Visit https://aka.ms/ts6 for migration information.
