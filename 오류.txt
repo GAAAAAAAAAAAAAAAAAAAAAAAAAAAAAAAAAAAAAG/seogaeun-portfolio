@@ -1,16 +1,9 @@
-Failed to compile
-
-Next.js (14.2.3) is outdated (learn more)
-./app/globals.css.webpack[javascript/auto]!=!./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./app/globals.css
-Error: Cannot find module '@tailwindcss/postcss'
-Require stack:
-- C:\Users\서가은\seogaeun-portfolio\node_modules\next\dist\build\webpack\config\blocks\css\plugins.js
-- C:\Users\서가은\seogaeun-portfolio\node_modules\next\dist\build\webpack\config\blocks\css\index.js
-- C:\Users\서가은\seogaeun-portfolio\node_modules\next\dist\build\webpack\config\index.js
-- C:\Users\서가은\seogaeun-portfolio\node_modules\next\dist\build\webpack-config.js
-- C:\Users\서가은\seogaeun-portfolio\node_modules\next\dist\server\dev\hot-reloader-webpack.js
-- C:\Users\서가은\seogaeun-portfolio\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
-- C:\Users\서가은\seogaeun-portfolio\node_modules\next\dist\server\lib\router-server.js
-- C:\Users\서가은\seogaeun-portfolio\node_modules\next\dist\server\lib\start-server.js
-    at Array.map (<anonymous>)
-This error occurred during the build process and can only be dismissed by fixing the error.
+Failed to compile.
+./app/layout.tsx:1:8
+Type error: Cannot find module or type declarations for side-effect import of './globals.css'.
+> 1 | import './globals.css';
+    |        ^
+  2 |
+  3 | export const metadata = {
+  4 |   title: '서가은 - 게임 개발자 포트폴리오',
+Error: Command "npm run build" exited with 1
