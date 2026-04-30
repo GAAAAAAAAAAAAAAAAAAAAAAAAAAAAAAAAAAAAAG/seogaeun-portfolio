@@ -1,8 +1,8 @@
 import './globals.css';
 
 export const metadata = {
-  title: '서가은 - 게임 개발자 포트폴리오',
-  description: '경험을 창조하는 게임 개발자, 서가은의 포트폴리오입니다.',
+  title: '서가은',
+  description: '게임 개발자 서가은의 포트폴리오입니다.',
   icons: {
     icon: '/favicon.ico',
   },
