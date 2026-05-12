@@ -4,14 +4,14 @@ import ProjectCard from './ProjectCard';
 const projectsData = [
   {
     id: 1,
-    title: "Neon Cyber Strike",
-    genre: "Action FPS",
-    duration: "2024.09 - 2024.12",
-    teamSize: "4인 프로젝트",
-    role: "무기 시스템 및 적 AI 상태 머신(FSM) 설계 및 구현. 플레이어의 이동 속도와 피격 데미지 계산 최적화.",
+    title: "Sandy Heroes",
+    genre: "PVE FPS",
+    duration: "2024.09 - 2025.8",
+    teamSize: "3인 프로젝트",
+    role: "그림자 매핑, 파티클 시스템, 충돌 처리, 길찾기 알고리즘 구현 및 맵·콘텐츠 제작 담당",
     github: "https://github.com",
     playLink: "https://steampowered.com",
-    image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=400&h=200&fit=crop"
+    image: "https://img.youtube.com/vi/CVMWE64RcTc/maxresdefault.jpg"
   },
   {
     id: 2,
@@ -43,7 +43,7 @@ export default function Projects() {
         <h2 className="section-title">
           My <span>Projects</span>
         </h2>
-        
+
         <div className="projects-grid">
           {projectsData.map(project => (
             <ProjectCard key={project.id} project={project} />
