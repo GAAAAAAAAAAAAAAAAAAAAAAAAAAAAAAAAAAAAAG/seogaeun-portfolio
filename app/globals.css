@@ -1,12 +1,13 @@
 :root {
-  --bg-color: #0a0e17;
-  --surface-color: #111827;
-  --surface-border: #1f2937;
-  --text-primary: #ffffff;
-  --text-secondary: #9ca3af;
-  --accent-color: #00f0ff;
-  --accent-hover: #00c3ff;
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --bg-color: #f7f7f7;
+  --surface-color: #ffffff;
+  --surface-border: #535353;
+  --text-primary: #535353;
+  --text-secondary: #757575;
+  --accent-color: #535353;
+  --accent-hover: #202124;
+  --font-sans: 'Helvetica', 'Arial', sans-serif;
+  --font-mono: 'Courier New', Courier, monospace;
 }
 
 * {
@@ -56,8 +57,9 @@ a {
 }
 
 .section-title span {
-  color: var(--accent-color);
-  text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+  color: var(--text-primary);
+  text-decoration: underline;
+  text-underline-offset: 8px;
 }
 
 /* Animations */
@@ -83,7 +85,7 @@ a {
   background-color: transparent;
   color: var(--accent-color);
   border: 2px solid var(--accent-color);
-  border-radius: 4px;
+  border-radius: 0px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -92,9 +94,8 @@ a {
 }
 
 .btn:hover {
-  background-color: var(--accent-color);
+  background-color: var(--text-primary);
   color: var(--bg-color);
-  box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
 }
 
 .btn-primary {
@@ -103,9 +104,8 @@ a {
 }
 
 .btn-primary:hover {
-  background-color: var(--accent-hover);
-  border-color: var(--accent-hover);
-  box-shadow: 0 0 20px rgba(0, 240, 255, 0.6);
+  background-color: #000;
+  border-color: #000;
 }
 
 /* Header */
@@ -115,10 +115,9 @@ a {
   left: 0;
   width: 100%;
   padding: 1.5rem 0;
-  background-color: rgba(10, 14, 23, 0.8);
-  backdrop-filter: blur(10px);
+  background-color: var(--bg-color);
   z-index: 1000;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 2px solid var(--surface-border);
 }
 
 .header-container {
@@ -135,7 +134,7 @@ a {
 }
 
 .logo span {
-  color: var(--accent-color);
+  color: var(--text-secondary);
 }
 
 .nav-links {
@@ -169,11 +168,12 @@ a {
 .hero::before {
   content: '';
   position: absolute;
-  top: 0;
+  bottom: 100px;
   left: 0;
   width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at center, rgba(0, 240, 255, 0.1) 0%, rgba(10, 14, 23, 1) 70%);
+  height: 2px;
+  background-image: linear-gradient(to right, var(--surface-border) 50%, transparent 50%);
+  background-size: 20px 2px;
   z-index: -1;
 }
 
@@ -198,10 +198,10 @@ a {
 }
 
 .hero-title span {
-  color: transparent;
-  -webkit-text-stroke: 1px var(--accent-color);
-  background: linear-gradient(90deg, var(--accent-color), #fff);
-  -webkit-background-clip: text;
+  background: none;
+  -webkit-text-stroke: 0;
+  color: var(--text-primary);
+  font-family: var(--font-mono);
 }
 
 .hero-subtitle {
@@ -251,8 +251,8 @@ a {
 }
 
 .skill-tag:hover {
-  border-color: var(--accent-color);
-  box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
+  background-color: var(--text-primary);
+  color: var(--bg-color);
   transform: translateY(-2px);
 }
 
@@ -274,9 +274,8 @@ a {
   top: 0;
   width: 16px;
   height: 16px;
-  border-radius: 50%;
-  background-color: var(--accent-color);
-  box-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+  border-radius: 0;
+  background-color: var(--text-primary);
 }
 
 .experience-item:last-child {
@@ -317,9 +316,8 @@ a {
 }
 
 .project-card:hover {
-  transform: translateY(-10px);
-  border-color: rgba(0, 240, 255, 0.3);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 240, 255, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 8px 8px 0px var(--surface-border);
 }
 
 .project-image-wrapper {
@@ -360,9 +358,9 @@ a {
 .project-genre {
   font-size: 0.8rem;
   padding: 0.2rem 0.5rem;
-  background-color: rgba(0, 240, 255, 0.1);
-  color: var(--accent-color);
-  border-radius: 4px;
+  border: 1px solid var(--surface-border);
+  color: var(--text-primary);
+  border-radius: 0;
 }
 
 .project-info {
