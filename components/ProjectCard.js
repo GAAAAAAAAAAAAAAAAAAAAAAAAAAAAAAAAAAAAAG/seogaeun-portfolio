@@ -30,12 +30,12 @@ export default function ProjectCard({ project }) {
         
         <div className="project-links">
           {project.github && (
-            <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link">
+            <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link" onClick={(e) => e.stopPropagation()}>
               <Github size={18} /> GitHub
             </a>
           )}
           {project.playLink && (
-            <a href={project.playLink} target="_blank" rel="noopener noreferrer" className="project-link">
+            <a href={project.playLink} target="_blank" rel="noopener noreferrer" className="project-link" onClick={(e) => e.stopPropagation()}>
               <Play size={18} /> Play
             </a>
           )}

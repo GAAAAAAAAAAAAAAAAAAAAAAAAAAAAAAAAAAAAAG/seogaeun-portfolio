@@ -9,6 +9,13 @@ export default function About() {
         </h2>
 
         <div className="about-grid">
+          <div className="about-image-container">
+            <div className="about-image-wrapper">
+              <img src="/profile.jpg" alt="서가은 프로필 사진" className="about-profile-image" />
+              <div className="about-image-glow"></div>
+            </div>
+          </div>
+
           <div className="about-text">
             <p>
               안녕하세요! 유저에게 잊지 못할 경험을 선사하는 게임 개발자 서가은입니다.

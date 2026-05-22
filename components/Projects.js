@@ -1,17 +1,37 @@
-import React from 'react';
+"use client";
+
+import React, { useState } from 'react';
 import ProjectCard from './ProjectCard';
+import ProjectModal from './ProjectModal';
 
 const projectsData = [
   {
     id: 1,
     title: "Sandy Heroes",
-    genre: "PVE FPS",
-    duration: "2024.09 - 2025.8",
+    genre: "3D PvE FPS / PC",
+    duration: "2024.09 - 2025.08",
     teamSize: "3인 프로젝트",
     role: "그림자 매핑, 파티클 시스템, 충돌 처리, 길찾기 알고리즘 구현 및 맵·콘텐츠 제작 담당",
-    github: "https://github.com",
-    playLink: "https://steampowered.com",
-    image: "https://img.youtube.com/vi/CVMWE64RcTc/maxresdefault.jpg"
+    github: "https://github.com/klop2211/SandyHeroesClient",
+    playLink: "https://youtu.be/CVMWE64RcTc?si=qVf0-Clg6RNGWatZ",
+    image: "https://img.youtube.com/vi/CVMWE64RcTc/maxresdefault.jpg",
+    details: {
+      genre: "3D PvE FPS 게임 / PC",
+      summary: "캐주얼한 PvE 스타일의 게임으로, 최대 3명이 함께 플레이할 수 있는 1인칭 15분짜리 FPS 게임이다.",
+      concept: "사막 고대 유적에 숨어있는 나쁜 용을 물리쳐라!",
+      goals: [
+        "Component 구조를 사용한 게임 프레임워크",
+        "기하 쉐이더를 사용한 파티클 시스템과 몰입감을 높여주는 컷신 시스템",
+        "클라이언트와 서버의 연동을 위한 Lock 없는 IOCP 서버 구현"
+      ],
+      techStack: ["C++", "DirectX12", "IOCP"],
+      githubLinks: [
+        "https://github.com/klop2211/SandyHeroesClient",
+        "https://github.com/ehdxorhrl/SandyHeroes_--"
+      ],
+      reportFile: "/reports/[양식] 2025 게임공학과 최종 보고서.hwp",
+      reportFileName: "2025 게임공학과 최종 보고서.hwp"
+    }
   },
   {
     id: 2,
@@ -37,6 +57,16 @@ const projectsData = [
 ];
 
 export default function Projects() {
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  const handleProjectClick = (project) => {
+    setSelectedProject(project);
+  };
+
+  const closeModal = () => {
+    setSelectedProject(null);
+  };
+
   return (
     <section id="projects" className="section">
       <div className="container">
@@ -46,10 +76,16 @@ export default function Projects() {
 
         <div className="projects-grid">
           {projectsData.map(project => (
-            <ProjectCard key={project.id} project={project} />
+            <div key={project.id} onClick={() => handleProjectClick(project)} style={{ cursor: 'pointer' }}>
+              <ProjectCard project={project} />
+            </div>
           ))}
         </div>
       </div>
+      
+      {selectedProject && (
+        <ProjectModal project={selectedProject} onClose={closeModal} />
+      )}
     </section>
   );
 }
