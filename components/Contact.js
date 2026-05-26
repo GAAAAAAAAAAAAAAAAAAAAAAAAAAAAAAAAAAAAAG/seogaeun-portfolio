@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Github, Youtube, Download } from 'lucide-react';
+import { Mail, Github, Youtube, FileText } from 'lucide-react';
 
 export default function Contact() {
   return (
@@ -34,8 +34,8 @@ export default function Contact() {
             </div>
           </div>
 
-          <a href="/resume.pdf" className="btn btn-primary" style={{ marginTop: '1rem' }}>
-            이력서 다운로드 <Download size={18} />
+          <a href="/resume" className="btn btn-primary" style={{ marginTop: '1rem' }}>
+            이력서 보기 <FileText size={18} />
           </a>
         </div>
       </div>

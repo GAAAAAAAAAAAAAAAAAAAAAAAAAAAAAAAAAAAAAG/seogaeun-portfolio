@@ -1,5 +1,4 @@
-import React from 'react';
-import { ArrowRight, Download } from 'lucide-react';
+import { ArrowRight, FileText } from 'lucide-react';
 
 export default function Hero() {
   return (
@@ -19,8 +18,8 @@ export default function Hero() {
             <a href="#projects" className="btn btn-primary">
               프로젝트 보기 <ArrowRight size={18} />
             </a>
-            <a href="/resume.pdf" className="btn">
-              이력서 다운로드 <Download size={18} />
+            <a href="/resume" className="btn">
+              이력서 보기 <FileText size={18} />
             </a>
           </div>
         </div>
