@@ -25,26 +25,25 @@ export default function About() {
               저는 새로운 기술과 엔진을 배우는 것을 즐기며, 동료들과의 원활한 커뮤니케이션을 통해 프로젝트의 완성도를 높이는 것을 중요하게 생각합니다.
             </p>
 
-            <div className="skills-section">
-              <div className="skills-category">
-                <h4 className="skills-category-title">Core Skills</h4>
-                <div className="skills-container">
-                  <span className="skill-tag core">C++</span>
-                  <span className="skill-tag core">DirectX 12</span>
-                  <span className="skill-tag core">Data Structures</span>
-                  <span className="skill-tag core">Algorithms</span>
+              <div className="skills-section">
+                <div className="skills-category">
+                  <h4 className="skills-category-title">Core Skills</h4>
+                  <div className="skills-container">
+                    <span className="skill-tag core">C++</span>
+                    <span className="skill-tag core">DirectX 12</span>
+                  </div>
+                </div>
+                
+                <div className="skills-category" style={{ marginTop: '1.5rem' }}>
+                  <h4 className="skills-category-title">Familiar / Tools</h4>
+                  <div className="skills-container">
+                    <span className="skill-tag">Unity</span>
+                    <span className="skill-tag">Unreal Engine</span>
+                    <span className="skill-tag">C#</span>
+                    <span className="skill-tag">Git</span>
+                  </div>
                 </div>
               </div>
-              
-              <div className="skills-category" style={{ marginTop: '1.5rem' }}>
-                <h4 className="skills-category-title">Familiar / Tools</h4>
-                <div className="skills-container">
-                  <span className="skill-tag">Unity</span>
-                  <span className="skill-tag">Unreal Engine</span>
-                  <span className="skill-tag">Git</span>
-                </div>
-              </div>
-            </div>
           </div>
 
           <div className="about-experience">
