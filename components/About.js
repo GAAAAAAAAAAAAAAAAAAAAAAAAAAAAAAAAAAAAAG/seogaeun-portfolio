@@ -25,14 +25,25 @@ export default function About() {
               저는 새로운 기술과 엔진을 배우는 것을 즐기며, 동료들과의 원활한 커뮤니케이션을 통해 프로젝트의 완성도를 높이는 것을 중요하게 생각합니다.
             </p>
 
-            <div className="skills-container">
-              <span className="skill-tag">C++</span>
-              <span className="skill-tag">C#</span>
-              <span className="skill-tag">Unity</span>
-              <span className="skill-tag">Unreal Engine</span>
-              <span className="skill-tag">Git</span>
-              <span className="skill-tag">Data Structures</span>
-              <span className="skill-tag">Algorithms</span>
+            <div className="skills-section">
+              <div className="skills-category">
+                <h4 className="skills-category-title">Core Skills</h4>
+                <div className="skills-container">
+                  <span className="skill-tag core">C++</span>
+                  <span className="skill-tag core">DirectX 12</span>
+                  <span className="skill-tag core">Data Structures</span>
+                  <span className="skill-tag core">Algorithms</span>
+                </div>
+              </div>
+              
+              <div className="skills-category" style={{ marginTop: '1.5rem' }}>
+                <h4 className="skills-category-title">Familiar / Tools</h4>
+                <div className="skills-container">
+                  <span className="skill-tag">Unity</span>
+                  <span className="skill-tag">Unreal Engine</span>
+                  <span className="skill-tag">Git</span>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -42,6 +53,21 @@ export default function About() {
                 <span className="exp-date">2022.03 - 현재</span>
                 <h3 className="exp-title">한국공학대학교 게임공학과</h3>
                 <span className="exp-company">재학중</span>
+              </div>
+              <div className="experience-item">
+                <span className="exp-date">2022.03 - 2023.02</span>
+                <h3 className="exp-title">게임공학과 학생회 부원</h3>
+                <span className="exp-company">학과 내 행사 기획 및 지원</span>
+              </div>
+              <div className="experience-item">
+                <span className="exp-date">2024 1,2학기 / 2026 1학기</span>
+                <h3 className="exp-title">C/C++ 프로그래밍 학술 멘토</h3>
+                <span className="exp-company">학과 내 C/C++ 멘토링 진행</span>
+              </div>
+              <div className="experience-item">
+                <span className="exp-date">2024.03 - 2024.12</span>
+                <h3 className="exp-title">망고게이밍 친목 소모임 임원</h3>
+                <span className="exp-company">교내 게임 친목 소모임 운영진 활동</span>
               </div>
               <div className="experience-item">
                 <span className="exp-date">2026.02</span>

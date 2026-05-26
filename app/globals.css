@@ -230,6 +230,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 2rem;
 }
 
 .about-image-wrapper {
@@ -285,11 +286,25 @@ a {
   margin-bottom: 1.5rem;
 }
 
+.skills-section {
+  margin-top: 2rem;
+}
+
+.skills-category-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-left: 3px solid var(--accent-color);
+  padding-left: 0.5rem;
+}
+
 .skills-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 2rem;
+  gap: 0.8rem;
 }
 
 .skill-tag {
@@ -299,7 +314,7 @@ a {
   border-radius: 4px;
   font-size: 0.9rem;
   font-weight: 500;
-  color: var(--accent-color);
+  color: var(--text-secondary);
   transition: all 0.3s ease;
 }
 
@@ -307,10 +322,24 @@ a {
   border-color: var(--accent-color);
   box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
   transform: translateY(-2px);
+  color: var(--accent-color);
+}
+
+.skill-tag.core {
+  border-color: rgba(0, 240, 255, 0.4);
+  color: var(--accent-color);
+  box-shadow: 0 0 8px rgba(0, 240, 255, 0.1);
+  font-weight: 600;
+}
+
+.skill-tag.core:hover {
+  border-color: #fff;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.6);
 }
 
 .experience-list {
-  margin-top: 2rem;
+  margin-top: 0;
 }
 
 .experience-item {

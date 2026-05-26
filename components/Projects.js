@@ -13,7 +13,7 @@ const projectsData = [
     teamSize: "3인 프로젝트",
     role: "그림자 매핑, 파티클 시스템, 충돌 처리, 길찾기 알고리즘 구현 및 맵·콘텐츠 제작 담당",
     github: "https://github.com/klop2211/SandyHeroesClient",
-    playLink: "https://youtu.be/CVMWE64RcTc?si=qVf0-Clg6RNGWatZ",
+    playLink: "https://youtu.be/CVMWE64RcTc?si=x7CyGJ1dE2HHoyMh",
     image: "https://img.youtube.com/vi/CVMWE64RcTc/maxresdefault.jpg",
     details: {
       genre: "3D PvE FPS 게임 / PC",
@@ -35,24 +35,32 @@ const projectsData = [
   },
   {
     id: 2,
-    title: "Shadow of Ruins",
-    genre: "RPG",
-    duration: "2024.03 - 2024.06",
-    teamSize: "개인 프로젝트",
-    role: "인벤토리 시스템, 퀘스트 데이터 연동, 그리고 보스 몬스터의 패턴(페이즈 전환) 로직 핵심 구현.",
-    github: "https://github.com",
-    playLink: "https://itch.io",
-    image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=400&h=200&fit=crop"
-  },
-  {
-    id: 3,
-    title: "Galactic Racing",
-    genre: "Racing",
-    duration: "2023.10 - 2023.12",
-    teamSize: "2인 프로젝트",
-    role: "차량 물리 엔진 파라미터 조절 및 멀티플레이어 네트워크 동기화(Photon) 처리.",
-    github: "https://github.com",
-    image: "https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?q=80&w=400&h=200&fit=crop"
+    title: "The Hollow Bow",
+    genre: "3D PvE / PC",
+    duration: "2025.06.18 ~ 2025.06.20",
+    teamSize: "1인 프로젝트",
+    role: "기획, 레벨 디자인 및 블루프린트(Blueprint) 기반의 전체 게임플레이 시스템 및 UI 단독 개발",
+    github: "https://github.com/GAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAG",
+    playLink: "https://youtu.be/K9KKlUR2OVY?si=DSWlTxJqc0U4_vky",
+    image: "https://img.youtube.com/vi/K9KKlUR2OVY/maxresdefault.jpg",
+    details: {
+      genre: "3D PvE 게임 / PC (언리얼 엔진)",
+      summary: "불꽃 화살을 쏘는 궁수가 판타지 숲에만 존재하는 신비의 트로피를 구하러 가는 게임입니다.",
+      concept: "블루프린트를 통한 궁수 캐릭터의 전투 및 이동 메커니즘 설계",
+      goals: [
+        "Unreal Engine의 Blueprint를 활용한 PvE 게임 구현",
+        "블루프린트를 통한 궁수 캐릭터의 전투 및 이동 메커니즘 설계",
+        "레벨 디자인을 통한 적 배치 및 클리어 목표 설정"
+      ],
+      techStack: ["Unreal Engine 5.3", "Blueprint"],
+      githubLinks: [
+        "https://github.com/GAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAG"
+      ],
+      playLinks: [
+        { name: "게임 소개 (처음부터)", url: "https://youtu.be/K9KKlUR2OVY?si=DSWlTxJqc0U4_vky" },
+        { name: "게임 플레이 (6분 22초부터)", url: "https://youtu.be/K9KKlUR2OVY?t=382" }
+      ]
+    }
   }
 ];
 

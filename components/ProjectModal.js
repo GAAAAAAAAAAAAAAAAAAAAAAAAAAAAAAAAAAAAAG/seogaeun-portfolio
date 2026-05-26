@@ -124,10 +124,18 @@ export default function ProjectModal({ project, onClose }) {
               </a>
             ))}
 
-            {project.playLink && (
-              <a href={project.playLink} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-                <Play size={18} /> 영상 보기
-              </a>
+            {project.details?.playLinks ? (
+              project.details.playLinks.map((linkObj, idx) => (
+                <a key={idx} href={linkObj.url} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+                  <Play size={18} /> {linkObj.name}
+                </a>
+              ))
+            ) : (
+              project.playLink && (
+                <a href={project.playLink} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+                  <Play size={18} /> 영상 보기
+                </a>
+              )
             )}
 
             {project.details?.reportFile && (
