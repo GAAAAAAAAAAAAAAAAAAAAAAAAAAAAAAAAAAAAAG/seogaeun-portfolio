@@ -37,9 +37,7 @@ export default function About() {
                 <div className="skills-category" style={{ marginTop: '1.5rem' }}>
                   <h4 className="skills-category-title">Familiar / Tools</h4>
                   <div className="skills-container">
-                    <span className="skill-tag">Unity</span>
                     <span className="skill-tag">Unreal Engine</span>
-                    <span className="skill-tag">C#</span>
                     <span className="skill-tag">Git</span>
                   </div>
                 </div>
@@ -64,19 +62,14 @@ export default function About() {
                 <span className="exp-company">학과 내 C/C++ 멘토링 진행</span>
               </div>
               <div className="experience-item">
-                <span className="exp-date">2024.03 - 2024.12</span>
-                <h3 className="exp-title">망고게이밍 친목 소모임 임원</h3>
-                <span className="exp-company">교내 게임 친목 소모임 운영진 활동</span>
-              </div>
-              <div className="experience-item">
                 <span className="exp-date">2026.02</span>
                 <h3 className="exp-title">cbs AI 집중교육 조교</h3>
-                <span className="exp-company">n8n</span>
+                <span className="exp-company">n8n 단기 특강 조교 활동</span>
               </div>
               <div className="experience-item">
                 <span className="exp-date">2026.04</span>
                 <h3 className="exp-title">kbs 바이브코딩 특강 조교</h3>
-                <span className="exp-company">바이브코딩</span>
+                <span className="exp-company">바이브코딩 단기 특강 조교 활동</span>
               </div>
             </div>
           </div>

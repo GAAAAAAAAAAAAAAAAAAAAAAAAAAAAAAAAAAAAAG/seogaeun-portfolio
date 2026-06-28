@@ -154,9 +154,7 @@ export default function Resume() {
                 <div className="resume-skill-group">
                   <div className="resume-skill-group-title">Familiar / Tools</div>
                   <div className="resume-skill-tags">
-                    <span className="skill-tag">Unity</span>
                     <span className="skill-tag">Unreal Engine 5</span>
-                    <span className="skill-tag">C#</span>
                     <span className="skill-tag">Git</span>
                   </div>
                 </div>
@@ -182,12 +180,6 @@ export default function Resume() {
                   <div className="resume-edu-title">cbs AI 집중교육 조교 (n8n)</div>
                   <div className="resume-edu-date">2026.02</div>
                   <div className="resume-edu-desc">교육 실습 보조</div>
-                </div>
-
-                <div className="resume-edu-item">
-                  <div className="resume-edu-title">망고게이밍 친목 소모임 임원</div>
-                  <div className="resume-edu-date">2024.03 ~ 2024.12</div>
-                  <div className="resume-edu-desc">동아리 관리 및 이벤트 기획</div>
                 </div>
 
                 <div className="resume-edu-item">
