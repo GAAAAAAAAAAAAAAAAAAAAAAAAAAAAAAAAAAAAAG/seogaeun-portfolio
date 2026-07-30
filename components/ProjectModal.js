@@ -139,8 +139,8 @@ export default function ProjectModal({ project, onClose }) {
             )}
 
             {project.details?.reportFile && (
-              <a href={project.details.reportFile} download={project.details.reportFileName || "보고서"} className="btn">
-                <Download size={18} /> 보고서 다운로드
+              <a href={project.details.reportFile} download={project.details.reportFileName || "다운로드"} className="btn">
+                <Download size={18} /> {project.details.reportFile.endsWith('.zip') ? '게임 다운로드' : '보고서 다운로드'}
               </a>
             )}
           </div>

@@ -61,6 +61,30 @@ const projectsData = [
         { name: "게임 플레이 (6분 22초부터)", url: "https://youtu.be/K9KKlUR2OVY?t=382" }
       ]
     }
+  },
+  {
+    id: 3,
+    title: "재밌넥이라도 사랑은 하고 싶어",
+    genre: "영상형 시뮬레이션 / PC",
+    duration: "2026.07.24 ~ 2026.07.26",
+    teamSize: "3인 프로젝트",
+    role: "메인 기획 및 시나리오 작성, 디자인, 미니 게임 개발, 실사 영상 연기 및 QA 담당",
+    github: "",
+    playLink: "",
+    image: "/projects/jamitnex/logo.png",
+    details: {
+      genre: "영상형 시뮬레이션 / PC",
+      summary: "소심한 남주인공(플레이어)이 '재밌넥' 게임잼에서 자신에게 말을 걸어준 여주인공과 함께 게임을 만들며 설렘을 느끼는 내용의 영상형 연애 시뮬레이션 게임입니다.",
+      concept: "STT 및 LLM 기술을 활용한 플레이어 상호작용 중심의 게임 개발",
+      goals: [
+        "2026 재밌넥 게임잼 프로젝트 출품",
+        "STT 및 LLM 기술을 활용한 텍스트/음성 기반 상호작용형 영상 연애 시뮬레이션 개발"
+      ],
+      techStack: ["Unity", "STT", "LLM"],
+      githubLinks: [],
+      reportFile: "/projects/jamitnex/jamitnex.zip",
+      reportFileName: "재밌넥이라도 사랑은 하고 싶어.zip"
+    }
   }
 ];
 

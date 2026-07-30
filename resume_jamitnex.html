@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>NEXON GAMEJAM 2026 / 재밌넥 지원 포트폴리오 - 서가은</title>
+  <style>
+    /* Google Fonts 로드 */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+
+    :root {
+      --primary-color: #0066ff;
+      --primary-dark: #004ecc;
+      --primary-light: #e6f0ff;
+      --accent-color: #00d8ff;
+      --text-dark: #0f172a;
+      --text-medium: #334155;
+      --text-light: #64748b;
+      --bg-light: #f8fafc;
+      --border-color: #e2e8f0;
+      --font-sans: 'Inter', 'Noto Sans KR', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #d1d5db;
+      color: var(--text-dark);
+      font-family: var(--font-sans);
+      line-height: 1.45;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* A4 규격 레이아웃 */
+    .page {
+      background: white;
+      width: 210mm;
+      height: 297mm;
+      margin: 20px auto;
+      padding: 15mm 18mm;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    /* 프린트 시 여백 및 스타일 제어 */
+    @media print {
+      body {
+        background-color: white;
+        margin: 0;
+        padding: 0;
+      }
+      .page {
+        margin: 0;
+        box-shadow: none;
+        page-break-after: always;
+        width: 210mm;
+        height: 297mm;
+        padding: 15mm 18mm;
+      }
+      .page:last-child {
+        page-break-after: avoid;
+      }
+    }
+
+    /* 재밌넥 테마 상단 배너 */
+    .nexon-banner {
+      background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+      color: white;
+      padding: 8px 18px;
+      border-radius: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .nexon-banner span {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 2px 8px;
+      border-radius: 20px;
+      font-size: 0.7rem;
+    }
+
+    /* 헤더 프로필 */
+    .profile-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 2px solid var(--primary-color);
+      padding-bottom: 12px;
+      margin-bottom: 14px;
+    }
+
+    .profile-info h1 {
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--text-dark);
+      margin-bottom: 3px;
+    }
+
+    .profile-info h1 span {
+      color: var(--primary-color);
+    }
+
+    .profile-info .subtitle {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text-light);
+      margin-bottom: 10px;
+      letter-spacing: 0.3px;
+    }
+
+    /* 연락처 그리드 */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 5px;
+      font-size: 0.82rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: var(--text-medium);
+    }
+
+    .contact-item a {
+      color: var(--text-dark);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-item a:hover {
+      color: var(--primary-color);
+      text-decoration: underline;
+    }
+
+    .contact-icon {
+      width: 13px;
+      height: 13px;
+      color: var(--primary-color);
+      flex-shrink: 0;
+    }
+
+    /* 프로필 사진 */
+    .profile-image-container {
+      width: 80px;
+      height: 98px;
+      border-radius: 5px;
+      overflow: hidden;
+      border: 2px solid var(--primary-color);
+      box-shadow: 0 3px 8px rgba(0, 102, 255, 0.12);
+    }
+
+    .profile-image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* 세련된 자기소개 박스 */
+    .intro-box {
+      background-color: var(--primary-light);
+      border-left: 5px solid var(--primary-color);
+      padding: 12px 16px;
+      border-radius: 0 6px 6px 0;
+      margin-bottom: 16px;
+    }
+
+    .intro-box p {
+      font-size: 0.88rem;
+      color: var(--text-dark);
+      font-weight: 500;
+      text-align: justify;
+      word-break: keep-all;
+      line-height: 1.45;
+    }
+
+    /* 섹션 제목 */
+    .section-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 4px;
+    }
+
+    .section-title::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 14px;
+      background-color: var(--primary-color);
+      border-radius: 2px;
+    }
+
+    /* 기술 스택 레이아웃 */
+    .skills-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .skills-card {
+      background-color: var(--bg-light);
+      border: 1px solid var(--border-color);
+      border-radius: 5px;
+      padding: 8px 12px;
+    }
+
+    .skills-card h3 {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 5px;
+      text-transform: uppercase;
+    }
+
+    .skills-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .skill-tag {
+      background-color: white;
+      border: 1px solid var(--border-color);
+      color: var(--text-medium);
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 2px 6px;
+      border-radius: 3.5px;
+    }
+
+    .skill-tag.core {
+      border-color: var(--primary-color);
+      color: var(--primary-color);
+      background-color: rgba(0, 102, 255, 0.04);
+    }
+
+    /* 주요 프로젝트 가로형 분할 레이아웃 */
+    .project-card {
+      background: white;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 0; /* 테두리와 배경 분할을 위해 gap 제거 */
+      box-shadow: 0 1px 6px rgba(0,0,0,0.02);
+    }
+
+    /* [추가] 이미지 영역을 감싸는 래퍼: 연한 파란색 배경 지정 */
+    .project-media-wrapper {
+      background-color: #f0f6ff; /* 연한 파란색 배경 */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px; /* 사진 크기 보존을 위한 적정 여백 */
+      border-right: 1px solid var(--border-color); /* 경계선 추가 */
+    }
+
+    .project-media {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9; /* 래퍼 안에서 16:9 비율 유지 */
+      background-color: #1e293b;
+      overflow: hidden;
+      border-radius: 4px;
+    }
+
+    .project-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .project-body {
+      padding: 10px 15px; /* 패딩 소폭 상향하여 정돈 */
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .project-title {
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--text-dark);
+    }
+
+    .project-badge {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      background: var(--primary-light);
+      padding: 1px 6px;
+      border-radius: 3px;
+    }
+
+    .project-meta {
+      font-size: 0.75rem;
+      color: var(--text-light);
+    }
+
+    /* 프로젝트 내부 세부 섹션들 */
+    .project-info-block {
+      background-color: var(--bg-light);
+      border-radius: 4px;
+      padding: 6px 10px;
+      font-size: 0.8rem;
+      color: var(--text-medium);
+      line-height: 1.4;
+    }
+
+    .project-info-block strong {
+      color: var(--text-dark);
+    }
+
+    .project-desc-title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-top: 2px;
+    }
+
+    .project-desc {
+      font-size: 0.78rem;
+      color: var(--text-medium);
+      padding-left: 12px;
+      list-style-type: disc;
+      line-height: 1.4;
+    }
+
+    .project-desc li {
+      margin-bottom: 2px;
+      text-align: justify;
+      word-break: keep-all;
+    }
+
+    .project-tech-block {
+      font-size: 0.8rem;
+      color: var(--text-medium);
+      border-top: 1px solid var(--border-color);
+      padding-top: 4px;
+      margin-top: 2px;
+    }
+
+    .project-tech-block strong {
+      color: var(--primary-color);
+    }
+
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 2px;
+    }
+
+    .btn-link {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      text-decoration: none;
+      border: 1px solid var(--primary-color);
+      padding: 2px 8px;
+      border-radius: 4px;
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      background: white;
+    }
+
+    .btn-link:hover {
+      background-color: var(--primary-color);
+      color: white;
+    }
+
+    /* 애니메이션 및 미디어 섹션 (2열 그리드) */
+    .animation-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .animation-card {
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      background-color: white;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: 0; /* 테두리와 배경 분할을 위해 gap 제거 */
+      box-shadow: 0 1px 5px rgba(0,0,0,0.01);
+    }
+
+    /* [추가] 애니메이션 이미지 영역을 감싸는 래퍼: 연한 파란색 배경 지정 */
+    .animation-media-wrapper {
+      background-color: #f0f6ff; /* 연한 파란색 배경 */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px;
+      border-right: 1px solid var(--border-color);
+    }
+
+    .animation-media {
+      width: 100%;
+      aspect-ratio: 16 / 9; /* 래퍼 내부에서 비율 유지 */
+      background-color: #1e293b;
+      overflow: hidden;
+      border-radius: 4px;
+    }
+
+    .animation-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .animation-body {
+      padding: 6px 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-grow: 1;
+    }
+
+    .animation-info h4 {
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: var(--text-dark);
+    }
+
+    .animation-info p {
+      font-size: 0.75rem;
+      color: var(--text-medium);
+      line-height: 1.35;
+    }
+
+    /* 학력 및 활동 이력 스타일 */
+    .history-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .history-item {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      border-left: 2px solid var(--primary-light);
+      padding-left: 10px;
+      position: relative;
+    }
+
+    .history-item::before {
+      content: '';
+      position: absolute;
+      left: -5px;
+      top: 5px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--primary-color);
+    }
+
+    .history-date {
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: var(--primary-color);
+    }
+
+    .history-content h4 {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    .history-content p {
+      font-size: 0.75rem;
+      color: var(--text-light);
+    }
+
+    /* 하단 푸터 / 페이지 번호 */
+    .page-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--border-color);
+      padding-top: 4px;
+      font-size: 0.68rem;
+      color: var(--text-light);
+      margin-top: 6px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- PAGE 1 -->
+  <div class="page">
+    <div>
+      <div class="nexon-banner">
+        NEXON GAMEJAM 2026 / 재밌넥 지원 포트폴리오
+        <span>GAME PROGRAMMING</span>
+      </div>
+
+      <div class="profile-section">
+        <div class="profile-info">
+          <h1>서가은 <span>Seo Gaeun</span></h1>
+          <div class="subtitle">게임 프로그래머 (Game Programmer)</div>
+          <div class="contact-grid">
+            <div class="contact-item">
+              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <a href="mailto:seogaeun@tukorea.ac.kr">seogaeun@tukorea.ac.kr</a>
+            </div>
+            <div class="contact-item">
+              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              <span>010-6513-2117</span>
+            </div>
+            <div class="contact-item">
+              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              <a href="https://github.com/GAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAG" target="_blank">github.com/GAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAG</a>
+            </div>
+            <div class="contact-item">
+              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+              <a href="https://seogaeun.com" target="_blank">seogaeun.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="profile-image-container">
+          <img src="C:/Users/서가은/seogaeun-portfolio/public/profile.jpg" alt="서가은 프로필">
+        </div>
+      </div>
+
+      <!-- 새로운 강점 소개 영역 -->
+      <div class="intro-box">
+        <p>
+          단일 직무에만 갇히지 않고, 게임공학과에 재학하며 <strong>모델링, 애니메이션, 클라이언트, 서버</strong>에 이르기까지 다양한 게임 제작 파이프라인의 수업을 수강하고 다른 직군의 수업을 청강하며 적극적으로 학습해 왔습니다. 기획자, 아티스트, 프로그래머 각각이 겪는 직무적 고충과 작업 방식을 깊이 있게 이해하고 있기에, 짧은 시간 동안 최상의 합을 내야 하는 게임잼 협업에서 **"팀의 원활한 소통을 돕고 직군 간 요구사항을 조율하는 신뢰할 수 있는 브릿지"** 역할을 충실히 수행할 수 있습니다.
+        </p>
+      </div>
+
+      <div class="section-title">기술 스택 (Skills)</div>
+      <div class="skills-layout">
+        <div class="skills-card">
+          <h3>Core Skills</h3>
+          <div class="skills-tags">
+            <span class="skill-tag core">C++</span>
+            <span class="skill-tag core">DirectX 12</span>
+          </div>
+        </div>
+        <div class="skills-card">
+          <h3>Familiar / Tools</h3>
+          <div class="skills-tags">
+            <span class="skill-tag">Unreal Engine 5</span>
+            <span class="skill-tag">Git</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-title">주요 프로젝트</div>
+      
+      <!-- Sandy Heroes -->
+      <div class="project-card">
+        <div class="project-media-wrapper">
+          <div class="project-media">
+            <img src="https://img.youtube.com/vi/CVMWE64RcTc/maxresdefault.jpg" alt="Sandy Heroes 썸네일">
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-header">
+            <div class="project-title">Sandy Heroes</div>
+            <span class="project-badge">3인 / FPS</span>
+          </div>
+          <div class="project-meta">📅 2024.09 ~ 2025.08</div>
+          
+          <div class="project-info-block">
+            <strong>장르:</strong> 3D PvE FPS 게임 / PC<br>
+            <strong>프로젝트 소개:</strong><br>
+            &bull; 한 줄 요약: 캐주얼한 PvE 스타일의 게임으로, 최대 3명이 함께 플레이할 수 있는 1인칭 15분짜리 FPS 게임이다.<br>
+            &bull; 핵심 컨셉: 사막 고대 유적에 숨어있는 나쁜 용을 물리쳐라!<br>
+            <strong>기본 정보:</strong><br>
+            &bull; 나의 역할: 그림자 매핑, 파티클 시스템, 충돌 처리, 길찾기 알고리즘 구현 및 맵·콘텐츠 제작 담당
+          </div>
+
+          <div class="project-desc-title">[개발 목표]</div>
+          <ul class="project-desc">
+            <li>Component 구조를 사용한 게임 프레임워크</li>
+            <li>기하 쉐이더를 사용한 파티클 시스템과 몰입감을 높여주는 컷신 시스템</li>
+            <li>클라이언트와 서버의 연동을 위한 Lock 없는 IOCP 서버 구현</li>
+          </ul>
+
+          <div class="project-tech-block">
+            사용 기술: <strong>C++, DirectX12, IOCP</strong>
+          </div>
+
+          <div class="project-links">
+            <a href="https://youtu.be/CVMWE64RcTc?si=x7CyGJ1dE2HHoyMh" target="_blank" class="btn-link">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+              플레이 영상
+            </a>
+            <a href="https://github.com/klop2211/SandyHeroesClient" target="_blank" class="btn-link">
+              GitHub (Client)
+            </a>
+            <a href="https://github.com/ehdxorhrl/SandyHeroes_--" target="_blank" class="btn-link">
+              GitHub (Server)
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="page-footer">
+      <span>서가은 - 게임 프로그래머 포트폴리오</span>
+      <span>1 / 2</span>
+    </div>
+  </div>
+
+  <!-- PAGE 2 -->
+  <div class="page">
+    <div>
+      <div class="section-title">주요 프로젝트</div>
+      
+      <!-- The Hollow Bow -->
+      <div class="project-card" style="margin-bottom: 14px;">
+        <div class="project-media-wrapper">
+          <div class="project-media">
+            <img src="https://img.youtube.com/vi/K9KKlUR2OVY/maxresdefault.jpg" alt="The Hollow Bow 썸네일">
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-header">
+            <div class="project-title">The Hollow Bow</div>
+            <span class="project-badge">1인 / 액션</span>
+          </div>
+          <div class="project-meta">📅 2025.06.18 ~ 2025.06.20</div>
+
+          <div class="project-info-block">
+            <strong>장르:</strong> 3D PvE 게임 / PC (언리얼 엔진)<br>
+            <strong>프로젝트 소개:</strong><br>
+            &bull; 한 줄 요약: 불꽃 화살을 쏘는 궁수가 판타지 숲에만 존재하는 신비의 트로피를 구하러 가는 게임입니다.<br>
+            &bull; 핵심 컨셉: 블루프린트를 통한 궁수 캐릭터의 전투 및 이동 메커니즘 설계<br>
+            <strong>기본 정보:</strong><br>
+            &bull; 나의 역할: 기획, 레벨 디자인 및 블루프린트(Blueprint) 기반의 전체 게임플레이 시스템 및 UI 단독 개발
+          </div>
+
+          <div class="project-desc-title">[개발 목표]</div>
+          <ul class="project-desc">
+            <li>Unreal Engine of Blueprint를 활용한 PvE 게임 구현</li>
+            <li>블루프린트를 통한 궁수 캐릭터의 전투 및 이동 메커니즘 설계</li>
+            <li>레벨 디자인을 통한 적 배치 및 클리어 목표 설정</li>
+          </ul>
+
+          <div class="project-tech-block">
+            사용 기술: <strong>Unreal Engine 5.3, Blueprint</strong>
+          </div>
+
+          <div class="project-links">
+            <a href="https://youtu.be/K9KKlUR2OVY?si=DSWlTxJqc0U4_vky" target="_blank" class="btn-link">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+              게임 소개 영상
+            </a>
+            <a href="https://youtu.be/K9KKlUR2OVY?t=382" target="_blank" class="btn-link">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+              게임 플레이 영상 (6:22 ~)
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 애니메이션 제작 경험 섹션 -->
+      <div class="section-title">애니메이션 및 미디어 제작 경험 (Art & Creative)</div>
+      <p style="font-size: 0.8rem; color: var(--text-medium); margin-bottom: 8px; word-break: keep-all;">
+        3D 그래픽스 파이프라인 and 아티스트들과의 원활한 소통을 위해 직접 3D 애니메이션 기획 및 영상 편집을 공부하고 개인 프로젝트로 진행한 결과물입니다.
+      </p>
+      <div class="animation-grid">
+        
+        <!-- 겜공의 플러팅 -->
+        <div class="animation-card">
+          <div class="animation-media-wrapper">
+            <div class="animation-media">
+              <img src="https://img.youtube.com/vi/Y2BMvJFtx20/maxresdefault.jpg" alt="겜공의 플러팅 썸네일">
+            </div>
+          </div>
+          <div class="animation-body">
+            <div class="animation-info">
+              <h4>겜공의 플러팅</h4>
+              <p>게임공학과 서아영의 두근두근 로맨스</p>
+            </div>
+            <a href="https://youtu.be/Y2BMvJFtx20?si=08S1MQsA6lsdVsR0" target="_blank" class="btn-link" style="align-self: flex-start;">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+              유튜브 영상 보기
+            </a>
+          </div>
+        </div>
+
+        <!-- 가은이의 모험 -->
+        <div class="animation-card">
+          <div class="animation-media-wrapper">
+            <div class="animation-media">
+              <img src="https://img.youtube.com/vi/GhddiflIppY/maxresdefault.jpg" alt="가은이의 모험 썸네일">
+            </div>
+          </div>
+          <div class="animation-body">
+            <div class="animation-info">
+              <h4>가은이의 모험</h4>
+              <p>체육관 전시를 위해 가은이는 모험을 떠나는데...</p>
+            </div>
+            <a href="https://youtu.be/GhddiflIppY?si=CpTnI43QCXmutbUZ" target="_blank" class="btn-link" style="align-self: flex-start;">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+              유튜브 영상 보기
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 학력 및 활동 이력 섹션 -->
+      <div class="section-title">학력 및 외부 활동 (Education & Experience)</div>
+      <div class="history-timeline">
+        <div class="history-item">
+          <div class="history-date">2022.03 - 현재</div>
+          <div class="history-content">
+            <h4>한국공학대학교 게임공학과 재학</h4>
+            <p>게임 프로그래밍 핵심 원리, 그래픽스 API, 게임 엔진 등 핵심 전공 이수 중</p>
+          </div>
+        </div>
+        <div class="history-item">
+          <div class="history-date">2022.03 - 2023.02</div>
+          <div class="history-content">
+            <h4>게임공학과 학생회 부원</h4>
+            <p>교내 게임공학과 행사 및 학술 행사 기획, 대내외 운영 지원</p>
+          </div>
+        </div>
+        <div class="history-item">
+          <div class="history-date">2024 - 2026</div>
+          <div class="history-content">
+            <h4>C/C++ 프로그래밍 학술 멘토</h4>
+            <p>학과 후배 대상 C/C++ 기초 프로그래밍 개념 멘토링 및 실습 지도 (총 3개 학기)</p>
+          </div>
+        </div>
+        <div class="history-item">
+          <div class="history-date">2026.04</div>
+          <div class="history-content">
+            <h4>kbs 바이브코딩 특강 조교</h4>
+            <p>바이브코딩 실습 과정 및 수강생 실무 활용 학습 지원 단기 조교 활동</p>
+          </div>
+        </div>
+        <div class="history-item">
+          <div class="history-date">2026.02</div>
+          <div class="history-content">
+            <h4>cbs AI 집중교육 조교</h4>
+            <p>n8n 자동화 도구 집중 교육 과정 및 수강생 실습 보조 단기 조교 활동</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>서가은 - 게임 프로그래머 포트폴리오</span>
+      <span>2 / 2</span>
+    </div>
+  </div>
+
+</body>
+</html>
