@@ -29,8 +29,8 @@ export default function Resume() {
             <h1 className="resume-name">서가은 <span>Seo Gaeun</span></h1>
             <div className="resume-job">게임 프로그래머 (Game Programmer)</div>
             <p className="resume-intro">
-              플레이어에게 잊지 못할 경험을 선사하고, 안정적이며 효율적인 시스템을 구현하는 게임 개발자 서가은입니다. 
-              단순한 코딩을 넘어 기획의 의도를 완전히 이해하고 최적의 게임 플레이를 설계하는 데 집중합니다.
+              게임공학을 전공하며 C++ 기반 게임 프로그래밍과 게임 클라이언트 개발을 공부하고 있습니다.
+              AI 도구를 활용해 구현 방향을 찾아보고, 막히는 부분을 작은 단위로 나누어 확인하며 개발 과정을 더 빠르고 명확하게 만드는 데 관심이 있습니다.
             </p>
           </div>
 
@@ -41,8 +41,89 @@ export default function Resume() {
               <div className="resume-section">
                 <h2 className="resume-sec-title">Projects</h2>
 
-                {/* Project 1: The Hollow Bow */}
+                {/* Project 1: Sandy Heroes */}
                 <div className="resume-project-item">
+                  <img src="https://img.youtube.com/vi/CVMWE64RcTc/maxresdefault.jpg" alt="Sandy Heroes" className="resume-project-image" />
+                  <div className="resume-proj-header">
+                    <h3 className="resume-proj-title">Sandy Heroes</h3>
+                    <span className="resume-proj-date">2024.09 ~ 2025.08</span>
+                  </div>
+                  <div className="resume-proj-tech">
+                    사용 기술: <strong>C++, DirectX 12, IOCP</strong> (3인 프로젝트)
+                  </div>
+                  <div className="resume-proj-desc">
+                    Component 구조를 적용한 커스텀 프레임워크 기반의 3D PvE 3인 멀티플레이어 FPS 게임입니다.
+                    <ul>
+                      <li><strong>그림자 매핑(Shadow Mapping)</strong>: 광원 시점의 깊이 맵(Depth Map)을 생성하여 실시간 3D 그림자 구현 및 시각적 몰입감 극대화.</li>
+                      <li><strong>파티클 시스템(Particle System)</strong>: 기하 쉐이더(Geometry Shader)를 도입하여 CPU 오버헤드를 해소하고, GPU 연산 기반 실시간 폭발 및 사막 모래바람 연출 구현.</li>
+                      <li><strong>충돌 처리(Collision Detection)</strong>: 3D 월드 공간 상에서 움직이는 캐릭터와 오브젝트 간의 정밀한 충돌 검사 및 물리 반응 구현.</li>
+                      <li><strong>길찾기 알고리즘 및 맵 제작</strong>: A* 알고리즘을 직접 구현하여 적 몬스터의 장애물 회피 및 최적 경로 추적 AI 시스템 구축, 사막 유적 레벨 디자인 및 콘텐츠 배치 담당.</li>
+                    </ul>
+                  </div>
+                  <div className="resume-proj-links">
+                    <a href="https://youtu.be/CVMWE64RcTc?si=x7CyGJ1dE2HHoyMh" target="_blank" rel="noopener noreferrer">
+                      소개 영상 링크
+                    </a>
+                    <a href="https://github.com/klop2211/SandyHeroesClient" target="_blank" rel="noopener noreferrer">
+                      GitHub Client
+                    </a>
+                    <a href="https://github.com/ehdxorhrl/SandyHeroes_--" target="_blank" rel="noopener noreferrer">
+                      GitHub Server
+                    </a>
+                  </div>
+                </div>
+
+                {/* Project 2: Jamitnex */}
+                <div className="resume-project-item">
+                  <img src="/projects/jamitnex/logo.png" alt="재밌넥이라도 사랑은 하고 싶어" className="resume-project-image resume-project-image-contain" />
+                  <div className="resume-proj-header">
+                    <h3 className="resume-proj-title">재밌넥이라도 사랑은 하고 싶어</h3>
+                    <span className="resume-proj-date">2026.07.24 ~ 2026.07.26</span>
+                  </div>
+                  <div className="resume-proj-tech">
+                    사용 기술: <strong>Unity, STT, LLM</strong> (4인 프로젝트)
+                  </div>
+                  <div className="resume-proj-desc">
+                    2026 재밌넥 게임잼에서 제작한 영상형 시뮬레이션 게임입니다.
+                    <ul>
+                      <li>메인 기획 및 시나리오 작성, 디자인, 미니 게임 개발 담당.</li>
+                      <li>실사 영상 연기와 QA를 함께 맡아 콘텐츠 완성도를 점검.</li>
+                      <li>STT 및 LLM 기술을 활용한 텍스트/음성 기반 상호작용을 기획에 반영.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                {/* Project 3: Diet Defense */}
+                <div className="resume-project-item">
+                  <img src="https://img.youtube.com/vi/Jr1Cg_P9-L8/maxresdefault.jpg" alt="Diet Defense" className="resume-project-image" />
+                  <div className="resume-proj-header">
+                    <h3 className="resume-proj-title">Diet Defense</h3>
+                    <span className="resume-proj-date">2026.07.03 ~ 2026.07.05</span>
+                  </div>
+                  <div className="resume-proj-tech">
+                    사용 기술: <strong>C++, Direct2D, ChatGPT, Codex, Suno AI</strong> (1인 프로젝트)
+                  </div>
+                  <div className="resume-proj-desc">
+                    재밌넥 참가를 위한 사전 과제로 제작한 Direct2D 기반 2D 타워 디펜스 게임입니다.
+                    <ul>
+                      <li>타워 배치, 강화, 판매, 자원 관리 시스템 구현.</li>
+                      <li>6개 웨이브와 3단계 스테이지, Q/W/E 스킬, 랜덤 이벤트 구성.</li>
+                      <li>ChatGPT, Codex, Suno AI를 활용해 기획, 구현 보조, 리소스 제작 과정을 진행.</li>
+                    </ul>
+                  </div>
+                  <div className="resume-proj-links">
+                    <a href="https://youtu.be/Jr1Cg_P9-L8?si=2UhyFg3MbtbPymJD" target="_blank" rel="noopener noreferrer">
+                      플레이 영상 링크
+                    </a>
+                    <a href="/projects/diet-defense/diet_defense_work_report.pdf" target="_blank" rel="noopener noreferrer">
+                      보고서
+                    </a>
+                  </div>
+                </div>
+
+                {/* Project 4: The Hollow Bow */}
+                <div className="resume-project-item">
+                  <img src="https://img.youtube.com/vi/K9KKlUR2OVY/maxresdefault.jpg" alt="The Hollow Bow" className="resume-project-image" />
                   <div className="resume-proj-header">
                     <h3 className="resume-proj-title">The Hollow Bow</h3>
                     <span className="resume-proj-date">2025.06.18 ~ 2025.06.20</span>
@@ -64,34 +145,38 @@ export default function Resume() {
                     </a>
                   </div>
                 </div>
+              </div>
 
-                {/* Project 2: Sandy Heroes */}
+              <div className="resume-section">
+                <h2 className="resume-sec-title">Additional Works</h2>
                 <div className="resume-project-item">
                   <div className="resume-proj-header">
-                    <h3 className="resume-proj-title">Sandy Heroes</h3>
-                    <span className="resume-proj-date">2024.09 ~ 2025.08</span>
+                    <h3 className="resume-proj-title">Animation Works</h3>
+                    <span className="resume-proj-date">2026</span>
                   </div>
-                  <div className="resume-proj-tech">
-                    사용 기술: <strong>C++, DirectX 12, IOCP</strong> (3인 프로젝트)
+                  <div className="resume-animation-thumbs">
+                    <a href="https://youtu.be/Y2BMvJFtx20?si=NcvgcZD-LYBagvNR" target="_blank" rel="noopener noreferrer">
+                      <img src="https://img.youtube.com/vi/Y2BMvJFtx20/maxresdefault.jpg" alt="MetaHuman Cinematic" />
+                      <span>Unreal · MetaHuman</span>
+                    </a>
+                    <a href="https://youtu.be/GhddiflIppY?si=J9Y7g5K9TIISYMVg" target="_blank" rel="noopener noreferrer">
+                      <img src="https://img.youtube.com/vi/GhddiflIppY/maxresdefault.jpg" alt="Unity Character Animation" />
+                      <span>Unity · Modeling · Rigging</span>
+                    </a>
                   </div>
                   <div className="resume-proj-desc">
-                    Component 구조를 적용한 커스텀 프레임워크 기반의 3D PvE 3인 멀티플레이어 FPS 게임입니다.
+                    코딩뿐 아니라 캐릭터, 연출, 제작 파이프라인에도 관심을 가지고 진행한 짧은 애니메이션 작업입니다.
                     <ul>
-                      <li><strong>그림자 매핑(Shadow Mapping)</strong>: 광원 시점의 깊이 맵(Depth Map)을 생성하여 실시간 3D 그림자 구현 및 시각적 몰입감 극대화.</li>
-                      <li><strong>파티클 시스템(Particle System)</strong>: 기하 쉐이더(Geometry Shader)를 도입하여 CPU 오버헤드를 해소하고, GPU 연산 기반 실시간 폭발 및 사막 모래바람 연출 구현.</li>
-                      <li><strong>충돌 처리(Collision Detection)</strong>: 3D 월드 공간 상에서 움직이는 캐릭터와 정적/동적 오브젝트 간의 정밀한 충돌 검사 및 물리 반응 구현.</li>
-                      <li><strong>길찾기 알고리즘 및 맵 제작</strong>: A* 알고리즘을 직접 구현하여 적 몬스터의 장애물 회피 및 최적 경로 추적 AI 시스템 구축, 사막 유적 레벨 디자인 및 콘텐츠 배치 담당.</li>
+                      <li>Unreal Engine의 MetaHuman을 활용한 캐릭터 중심 시네마틱 제작.</li>
+                      <li>Unity 작업에서 모델링, 리깅, 애니메이션 제작을 직접 진행.</li>
                     </ul>
                   </div>
                   <div className="resume-proj-links">
-                    <a href="https://youtu.be/CVMWE64RcTc?si=x7CyGJ1dE2HHoyMh" target="_blank" rel="noopener noreferrer">
-                      소개 영상 링크
+                    <a href="https://youtu.be/Y2BMvJFtx20?si=NcvgcZD-LYBagvNR" target="_blank" rel="noopener noreferrer">
+                      Unreal 영상
                     </a>
-                    <a href="https://github.com/klop2211/SandyHeroesClient" target="_blank" rel="noopener noreferrer">
-                      GitHub Client
-                    </a>
-                    <a href="https://github.com/ehdxorhrl/SandyHeroes_--" target="_blank" rel="noopener noreferrer">
-                      GitHub Server
+                    <a href="https://youtu.be/GhddiflIppY?si=J9Y7g5K9TIISYMVg" target="_blank" rel="noopener noreferrer">
+                      Unity 영상
                     </a>
                   </div>
                 </div>
@@ -126,7 +211,7 @@ export default function Resume() {
                   </li>
                   <li>
                     <Github size={16} className="contact-icon" />
-                    <a href="https://github.com/GAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAG" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/seogaeun22" target="_blank" rel="noopener noreferrer">
                       GitHub 프로필
                     </a>
                   </li>
@@ -172,7 +257,7 @@ export default function Resume() {
 
                 <div className="resume-edu-item">
                   <div className="resume-edu-title">kbs 바이브코딩 특강 조교</div>
-                  <div className="resume-edu-date">2026.04</div>
+                  <div className="resume-edu-date">2026.04 / 2026.07</div>
                   <div className="resume-edu-desc">특강 실습 지원</div>
                 </div>
 
@@ -180,6 +265,12 @@ export default function Resume() {
                   <div className="resume-edu-title">cbs AI 집중교육 조교 (n8n)</div>
                   <div className="resume-edu-date">2026.02</div>
                   <div className="resume-edu-desc">교육 실습 보조</div>
+                </div>
+
+                <div className="resume-edu-item">
+                  <div className="resume-edu-title">2026 재밌넥 게임잼 참가</div>
+                  <div className="resume-edu-date">2026.07</div>
+                  <div className="resume-edu-desc">영상형 시뮬레이션 게임 제작</div>
                 </div>
 
                 <div className="resume-edu-item">

@@ -5,14 +5,14 @@ export default function Hero() {
     <section id="home" className="hero">
       <div className="container">
         <div className="hero-content">
-          <span className="hero-greeting fade-in">Hello, World!</span>
+          <span className="hero-greeting fade-in">GAME PROGRAMMER PORTFOLIO</span>
           <h1 className="hero-title fade-in delay-1">
-            경험을 창조하는<br />
-            <span>게임 개발자</span> 서가은입니다.
+            <span>입력은 짧게,</span>
+            <span>경험은 오래 남게.</span>
           </h1>
           <p className="hero-subtitle fade-in delay-2">
-            플레이어의 심장을 뛰게 만드는 몰입감 넘치는 게임 플레이와 
-            최적화된 시스템을 구현하는 데 열정을 쏟고 있습니다.
+            <span className="subtitle-line">AI 도구로 빠르게 실험하고, C++와 DirectX 12, Unreal Engine으로 플레이어의 조작이</span>
+            <span className="subtitle-line">장면과 감각으로 이어지는 게임을 구현합니다.</span>
           </p>
           <div className="hero-actions fade-in delay-3">
             <a href="#projects" className="btn btn-primary">

@@ -18,11 +18,12 @@ export default function About() {
 
           <div className="about-text">
             <p>
-              안녕하세요! 유저에게 잊지 못할 경험을 선사하는 게임 개발자 서가은입니다.
-              단순히 코드를 작성하는 것을 넘어, 게임 디자인의 의도를 정확히 파악하고 이를 효율적인 시스템으로 구현하는 데 집중합니다.
+              안녕하세요. 게임공학을 전공하며 C++ 기반 게임 프로그래밍과 게임 클라이언트 개발을 공부하고 있는 서가은입니다.
+              AI 도구를 활용해 구현 방향을 찾아보고, 막히는 부분을 작은 단위로 나누어 확인하며 개발 과정을 더 빠르고 명확하게 만드는 데 관심이 있습니다.
             </p>
             <p>
-              저는 새로운 기술과 엔진을 배우는 것을 즐기며, 동료들과의 원활한 커뮤니케이션을 통해 프로젝트의 완성도를 높이는 것을 중요하게 생각합니다.
+              DirectX 12 프로젝트에서는 그림자, 파티클, 충돌, 길찾기 같은 기능을 맡아 구현했고, Unreal Engine 프로젝트에서는 전투 시스템과 레벨 구성을 직접 만들어 보며 플레이 흐름을 다듬었습니다.
+              새로운 기술을 배울 때는 AI의 도움을 받아 이해의 폭을 넓히고, 실제로 실행해 보며 제 것으로 만드는 과정을 중요하게 생각합니다.
             </p>
 
             <div className="skills-section">
@@ -62,19 +63,19 @@ export default function About() {
                 <span className="exp-company">학과 내 C/C++ 멘토링 진행</span>
               </div>
               <div className="experience-item">
-                <span className="exp-date">2024.03 - 2024.12</span>
-                <h3 className="exp-title">망고게이밍 친목 소모임 임원</h3>
-                <span className="exp-company">교내 게임 친목 소모임 운영진 활동</span>
-              </div>
-              <div className="experience-item">
                 <span className="exp-date">2026.02</span>
                 <h3 className="exp-title">cbs AI 집중교육 조교</h3>
                 <span className="exp-company">n8n 단기 특강 조교 활동</span>
               </div>
               <div className="experience-item">
-                <span className="exp-date">2026.04</span>
+                <span className="exp-date">2026.04 / 2026.07</span>
                 <h3 className="exp-title">kbs 바이브코딩 특강 조교</h3>
                 <span className="exp-company">바이브코딩 단기 특강 조교 활동</span>
+              </div>
+              <div className="experience-item">
+                <span className="exp-date">2026.07</span>
+                <h3 className="exp-title">2026 재밌넥 게임잼 참가</h3>
+                <span className="exp-company">영상형 시뮬레이션 게임 제작</span>
               </div>
             </div>
           </div>

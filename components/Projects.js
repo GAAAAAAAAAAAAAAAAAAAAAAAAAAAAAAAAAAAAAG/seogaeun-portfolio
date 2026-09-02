@@ -4,6 +4,78 @@ import React, { useState } from 'react';
 import ProjectCard from './ProjectCard';
 import ProjectModal from './ProjectModal';
 
+const experimentsData = [
+  {
+    id: "unreal-animation",
+    title: "MetaHuman Cinematic",
+    description: "Unreal Engine의 MetaHuman을 활용해 캐릭터 중심의 짧은 시네마틱을 제작했습니다.",
+    tool: "Unreal Engine · MetaHuman",
+    playLink: "https://youtu.be/Y2BMvJFtx20?si=NcvgcZD-LYBagvNR",
+    image: "https://img.youtube.com/vi/Y2BMvJFtx20/maxresdefault.jpg"
+  },
+  {
+    id: "unity-animation",
+    title: "Unity Character Animation",
+    description: "모델링, 리깅, 애니메이션 제작을 직접 진행하며 캐릭터 제작 흐름을 경험했습니다.",
+    tool: "Unity · Modeling · Rigging",
+    playLink: "https://youtu.be/GhddiflIppY?si=J9Y7g5K9TIISYMVg",
+    image: "https://img.youtube.com/vi/GhddiflIppY/maxresdefault.jpg"
+  }
+];
+
+function getYoutubeId(url) {
+  if (!url) return null;
+
+  try {
+    const parsedUrl = new URL(url);
+
+    if (parsedUrl.hostname.includes('youtu.be')) {
+      return parsedUrl.pathname.replace('/', '');
+    }
+
+    return parsedUrl.searchParams.get('v');
+  } catch {
+    return null;
+  }
+}
+
+function ExperimentCard({ experiment }) {
+  const [isPreviewing, setIsPreviewing] = useState(false);
+  const youtubeId = getYoutubeId(experiment.playLink);
+
+  return (
+    <a
+      href={experiment.playLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="experiment-card"
+      onMouseEnter={() => setIsPreviewing(true)}
+      onMouseLeave={() => setIsPreviewing(false)}
+      onFocus={() => setIsPreviewing(true)}
+      onBlur={() => setIsPreviewing(false)}
+    >
+      <div className="experiment-thumb">
+        <img src={experiment.image} alt={experiment.title} />
+        {youtubeId && isPreviewing && (
+          <iframe
+            className="project-video-preview"
+            src={`https://www.youtube.com/embed/${youtubeId}?autoplay=1&mute=1&controls=0&playsinline=1&loop=1&playlist=${youtubeId}&modestbranding=1&rel=0`}
+            title={`${experiment.title} preview`}
+            allow="autoplay; encrypted-media; picture-in-picture"
+            referrerPolicy="strict-origin-when-cross-origin"
+          />
+        )}
+        <span className="experiment-play">Play</span>
+      </div>
+      <div className="experiment-content">
+        <span className="experiment-tool">{experiment.tool}</span>
+        <h3>{experiment.title}</h3>
+        <p>{experiment.description}</p>
+      </div>
+    </a>
+  );
+}
+
 const projectsData = [
   {
     id: 1,
@@ -40,7 +112,7 @@ const projectsData = [
     duration: "2025.06.18 ~ 2025.06.20",
     teamSize: "1인 프로젝트",
     role: "기획, 레벨 디자인 및 블루프린트(Blueprint) 기반의 전체 게임플레이 시스템 및 UI 단독 개발",
-    github: "https://github.com/GAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAG",
+    github: "https://github.com/seogaeun22",
     playLink: "https://youtu.be/K9KKlUR2OVY?si=DSWlTxJqc0U4_vky",
     image: "https://img.youtube.com/vi/K9KKlUR2OVY/maxresdefault.jpg",
     details: {
@@ -54,7 +126,7 @@ const projectsData = [
       ],
       techStack: ["Unreal Engine 5.3", "Blueprint"],
       githubLinks: [
-        "https://github.com/GAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAG"
+        "https://github.com/seogaeun22"
       ],
       playLinks: [
         { name: "게임 소개 (처음부터)", url: "https://youtu.be/K9KKlUR2OVY?si=DSWlTxJqc0U4_vky" },
@@ -64,10 +136,49 @@ const projectsData = [
   },
   {
     id: 3,
+    title: "Diet Defense",
+    genre: "2D Tower Defense / PC",
+    duration: "2026.07.03 ~ 2026.07.05",
+    teamSize: "1인 프로젝트",
+    role: "기획, Direct2D 기반 게임 구현, 타워·웨이브·스킬·이벤트 시스템 제작 및 AI 도구를 활용한 리소스 제작/개발 보조",
+    github: "",
+    playLink: "https://youtu.be/Jr1Cg_P9-L8?si=2UhyFg3MbtbPymJD",
+    image: "https://img.youtube.com/vi/Jr1Cg_P9-L8/maxresdefault.jpg",
+    details: {
+      genre: "2D 타워 디펜스 게임 / PC",
+      summary: "다이어트 코어를 지키며 몰려오는 음식 몬스터를 막아내는 Direct2D 기반 2D 타워 디펜스 게임입니다.",
+      concept: "체중 60kg 도달을 막기 위해 타워를 배치하고, 웨이브와 이벤트를 넘기며 생존하는 캐주얼 디펜스",
+      goals: [
+        "Direct2D 기반 2D 타워 디펜스 게임 구현",
+        "타워 배치, 타워 강화, 판매, 자원 관리 시스템 제작",
+        "6개 웨이브와 3단계 스테이지, 스킬, 랜덤 이벤트 구성",
+        "ChatGPT, Codex, Suno AI를 활용한 기획, 구현, 리소스 제작 보조"
+      ],
+      techStack: ["C++", "Direct2D", "ChatGPT", "Codex", "Suno AI"],
+      githubLinks: [],
+      playLinks: [
+        { name: "플레이 영상", url: "https://youtu.be/Jr1Cg_P9-L8?si=2UhyFg3MbtbPymJD" }
+      ],
+      downloads: [
+        {
+          label: "보고서 다운로드",
+          url: "/projects/diet-defense/diet_defense_work_report.pdf",
+          fileName: "diet_defense_work_report.pdf"
+        },
+        {
+          label: "게임 다운로드",
+          url: "/projects/diet-defense/DietDefense_Final.zip",
+          fileName: "DietDefense_Final.zip"
+        }
+      ]
+    }
+  },
+  {
+    id: 4,
     title: "재밌넥이라도 사랑은 하고 싶어",
     genre: "영상형 시뮬레이션 / PC",
     duration: "2026.07.24 ~ 2026.07.26",
-    teamSize: "3인 프로젝트",
+    teamSize: "4인 프로젝트",
     role: "메인 기획 및 시나리오 작성, 디자인, 미니 게임 개발, 실사 영상 연기 및 QA 담당",
     github: "",
     playLink: "",
@@ -90,6 +201,7 @@ const projectsData = [
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
+  const orderedProjects = [projectsData[0], projectsData[3], projectsData[2], projectsData[1]];
 
   const handleProjectClick = (project) => {
     setSelectedProject(project);
@@ -107,11 +219,23 @@ export default function Projects() {
         </h2>
 
         <div className="projects-grid">
-          {projectsData.map(project => (
+          {orderedProjects.map(project => (
             <div key={project.id} onClick={() => handleProjectClick(project)} style={{ cursor: 'pointer' }}>
               <ProjectCard project={project} />
             </div>
           ))}
+        </div>
+
+        <div className="experiments-section">
+          <div className="experiments-heading">
+            <span>Animation Works</span>
+            <p>코딩뿐 아니라 캐릭터, 연출, 제작 파이프라인에도 관심을 가지고 작업한 짧은 애니메이션입니다.</p>
+          </div>
+          <div className="experiments-grid">
+            {experimentsData.map(experiment => (
+              <ExperimentCard key={experiment.id} experiment={experiment} />
+            ))}
+          </div>
         </div>
       </div>
       

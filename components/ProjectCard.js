@@ -1,16 +1,51 @@
-import React from 'react';
+"use client";
+
+import React, { useState } from 'react';
 import { Github, Play } from 'lucide-react';
 
+function getYoutubeId(url) {
+  if (!url) return null;
+
+  try {
+    const parsedUrl = new URL(url);
+
+    if (parsedUrl.hostname.includes('youtu.be')) {
+      return parsedUrl.pathname.replace('/', '');
+    }
+
+    return parsedUrl.searchParams.get('v');
+  } catch {
+    return null;
+  }
+}
+
 export default function ProjectCard({ project }) {
+  const [isPreviewing, setIsPreviewing] = useState(false);
+  const youtubeId = getYoutubeId(project.playLink);
+
   return (
-    <div className="project-card">
+    <div
+      className="project-card"
+      onMouseEnter={() => setIsPreviewing(true)}
+      onMouseLeave={() => setIsPreviewing(false)}
+      onFocus={() => setIsPreviewing(true)}
+      onBlur={() => setIsPreviewing(false)}
+    >
       <div className="project-image-wrapper">
-        {/* In a real project, use next/image. Here we use an img tag with placeholder */}
         <img 
           src={project.image || "/api/placeholder/400/200"} 
           alt={project.title} 
           className="project-image" 
         />
+        {youtubeId && isPreviewing && (
+          <iframe
+            className="project-video-preview"
+            src={`https://www.youtube.com/embed/${youtubeId}?autoplay=1&mute=1&controls=0&playsinline=1&loop=1&playlist=${youtubeId}&modestbranding=1&rel=0`}
+            title={`${project.title} preview`}
+            allow="autoplay; encrypted-media; picture-in-picture"
+            referrerPolicy="strict-origin-when-cross-origin"
+          />
+        )}
       </div>
       <div className="project-content">
         <div className="project-header">

@@ -116,7 +116,7 @@ export default function ProjectModal({ project, onClose }) {
           <div className="modal-links">
             {project.details?.githubLinks?.map((link, idx) => (
               <a key={idx} href={link} target="_blank" rel="noopener noreferrer" className="btn">
-                <Github size={18} /> GitHub {idx + 1}
+                <Github size={18} /> {project.details.githubLinks.length > 1 ? `GitHub ${idx + 1}` : 'GitHub'}
               </a>
             )) || (project.github && (
               <a href={project.github} target="_blank" rel="noopener noreferrer" className="btn">
@@ -143,6 +143,12 @@ export default function ProjectModal({ project, onClose }) {
                 <Download size={18} /> {project.details.reportFile.endsWith('.zip') ? '게임 다운로드' : '보고서 다운로드'}
               </a>
             )}
+
+            {project.details?.downloads?.map((download, idx) => (
+              <a key={`download-${idx}`} href={download.url} download={download.fileName || download.label} className="btn">
+                <Download size={18} /> {download.label}
+              </a>
+            ))}
           </div>
         </div>
       </div>

@@ -5,7 +5,7 @@ export default function Header() {
     <header className="header fade-in">
       <div className="container header-container">
         <div className="logo">
-          서가은<span>.</span>dev
+          SEO GAEUN
         </div>
         <ul className="nav-links">
           <li><a href="#home">Home</a></li>

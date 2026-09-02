@@ -43,3 +43,5 @@ next-env.d.ts
 # PDF files
 *.pdf
 *.zip
+!public/projects/diet-defense/diet_defense_work_report.pdf
+!public/projects/diet-defense/DietDefense_Final.zip

@@ -22,8 +22,8 @@ export default function Contact() {
             </div>
             <div className="contact-item">
               <Github className="contact-icon" size={24} />
-              <a href="https://github.com/GAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAG" target="_blank" rel="noopener noreferrer">
-                github.com/GAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAG
+              <a href="https://github.com/seogaeun22" target="_blank" rel="noopener noreferrer">
+                github.com/seogaeun22
               </a>
             </div>
             <div className="contact-item">
