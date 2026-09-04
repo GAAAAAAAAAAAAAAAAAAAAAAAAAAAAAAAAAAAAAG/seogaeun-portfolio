@@ -75,7 +75,7 @@ export default function Resume() {
 
                 {/* Project 2: Jamitnex */}
                 <div className="resume-project-item">
-                  <img src="/projects/jamitnex/logo.png" alt="재밌넥이라도 사랑은 하고 싶어" className="resume-project-image resume-project-image-contain" />
+                  <img src="/projects/jamitnex/thumbnail.png" alt="재밌넥이라도 사랑은 하고 싶어" className="resume-project-image" />
                   <div className="resume-proj-header">
                     <h3 className="resume-proj-title">재밌넥이라도 사랑은 하고 싶어</h3>
                     <span className="resume-proj-date">2026.07.24 ~ 2026.07.26</span>
@@ -101,7 +101,7 @@ export default function Resume() {
 
                 {/* Project 3: Diet Defense */}
                 <div className="resume-project-item">
-                  <img src="https://img.youtube.com/vi/Jr1Cg_P9-L8/maxresdefault.jpg" alt="Diet Defense" className="resume-project-image" />
+                  <img src="/projects/diet-defense/thumbnail.png" alt="Diet Defense" className="resume-project-image" />
                   <div className="resume-proj-header">
                     <h3 className="resume-proj-title">Diet Defense</h3>
                     <span className="resume-proj-date">2026.07.03 ~ 2026.07.05</span>

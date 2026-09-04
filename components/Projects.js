@@ -143,7 +143,7 @@ const projectsData = [
     role: "기획, Direct2D 기반 게임 구현, 타워·웨이브·스킬·이벤트 시스템 제작 및 AI 도구를 활용한 리소스 제작/개발 보조",
     github: "",
     playLink: "https://youtu.be/Jr1Cg_P9-L8?si=2UhyFg3MbtbPymJD",
-    image: "https://img.youtube.com/vi/Jr1Cg_P9-L8/maxresdefault.jpg",
+    image: "/projects/diet-defense/thumbnail.png",
     details: {
       genre: "2D 타워 디펜스 게임 / PC",
       summary: "다이어트 코어를 지키며 몰려오는 음식 몬스터를 막아내는 Direct2D 기반 2D 타워 디펜스 게임입니다.",
@@ -182,7 +182,7 @@ const projectsData = [
     role: "메인 기획 및 시나리오 작성, 디자인, 미니 게임 개발, 실사 영상 연기, Suno AI를 활용한 BGM 제작, 플레이 테스트 및 버그 수정 담당",
     github: "https://github.com/Bazzi4263/MyFirst3D",
     playLink: "https://youtu.be/H6Mu9AAfaFk",
-    image: "/projects/jamitnex/logo.png",
+    image: "/projects/jamitnex/thumbnail.png",
     details: {
       genre: "영상형 시뮬레이션 / PC",
       summary: "소심한 남주인공(플레이어)이 '재밌넥' 게임잼에서 자신에게 말을 걸어준 여주인공과 함께 게임을 만들며 설렘을 느끼는 내용의 영상형 연애 시뮬레이션 게임입니다.",

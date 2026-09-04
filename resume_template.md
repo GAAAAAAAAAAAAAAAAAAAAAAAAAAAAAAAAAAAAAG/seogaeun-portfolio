@@ -44,7 +44,7 @@
 ### 2. 재밌넥이라도 사랑은 하고 싶어
 *영상형 시뮬레이션 게임 (4인 개발)*
 - **개발 기간**: 2026.07.24 ~ 2026.07.26
-- **대표 이미지**: /projects/jamitnex/logo.png
+- **대표 이미지**: /projects/jamitnex/thumbnail.png
 - **사용 기술**: Unity, STT, LLM, Suno AI
 - **핵심 역할 및 구현 내용**:
   - 메인 기획 및 시나리오 작성, 디자인, 미니 게임 개발 담당.
@@ -56,7 +56,7 @@
 ### 3. Diet Defense
 *Direct2D 기반 2D 타워 디펜스 게임 (1인 개발)*
 - **개발 기간**: 2026.07.03 ~ 2026.07.05
-- **대표 이미지**: https://img.youtube.com/vi/Jr1Cg_P9-L8/maxresdefault.jpg
+- **대표 이미지**: /projects/diet-defense/thumbnail.png
 - **사용 기술**: C++, Direct2D, ChatGPT, Codex, Suno AI
 - **핵심 역할 및 구현 내용**:
   - 타워 배치, 강화, 판매, 자원 관리 시스템 구현.
