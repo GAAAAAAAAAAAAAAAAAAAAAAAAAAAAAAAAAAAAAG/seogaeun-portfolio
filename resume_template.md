@@ -45,11 +45,13 @@
 *영상형 시뮬레이션 게임 (4인 개발)*
 - **개발 기간**: 2026.07.24 ~ 2026.07.26
 - **대표 이미지**: /projects/jamitnex/logo.png
-- **사용 기술**: Unity, STT, LLM
+- **사용 기술**: Unity, STT, LLM, Suno AI
 - **핵심 역할 및 구현 내용**:
   - 메인 기획 및 시나리오 작성, 디자인, 미니 게임 개발 담당.
-  - 실사 영상 연기와 QA를 함께 맡아 콘텐츠 완성도를 점검.
+  - 실사 영상 연기와 Suno AI를 활용한 BGM 제작 담당.
+  - 플레이 테스트 및 버그 수정을 함께 맡아 콘텐츠 완성도를 점검.
   - STT 및 LLM 기술을 활용한 텍스트/음성 기반 상호작용을 기획에 반영.
+- **GitHub**: [Repository](https://github.com/Bazzi4263/MyFirst3D)
 
 ### 3. Diet Defense
 *Direct2D 기반 2D 타워 디펜스 게임 (1인 개발)*

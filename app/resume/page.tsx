@@ -81,15 +81,21 @@ export default function Resume() {
                     <span className="resume-proj-date">2026.07.24 ~ 2026.07.26</span>
                   </div>
                   <div className="resume-proj-tech">
-                    사용 기술: <strong>Unity, STT, LLM</strong> (4인 프로젝트)
+                    사용 기술: <strong>Unity, STT, LLM, Suno AI</strong> (4인 프로젝트)
                   </div>
                   <div className="resume-proj-desc">
                     2026 재밌넥 게임잼에서 제작한 영상형 시뮬레이션 게임입니다.
                     <ul>
                       <li>메인 기획 및 시나리오 작성, 디자인, 미니 게임 개발 담당.</li>
-                      <li>실사 영상 연기와 QA를 함께 맡아 콘텐츠 완성도를 점검.</li>
+                      <li>실사 영상 연기와 Suno AI를 활용한 BGM 제작 담당.</li>
+                      <li>플레이 테스트 및 버그 수정을 함께 맡아 콘텐츠 완성도를 점검.</li>
                       <li>STT 및 LLM 기술을 활용한 텍스트/음성 기반 상호작용을 기획에 반영.</li>
                     </ul>
+                  </div>
+                  <div className="resume-proj-links">
+                    <a href="https://github.com/Bazzi4263/MyFirst3D" target="_blank" rel="noopener noreferrer">
+                      GitHub
+                    </a>
                   </div>
                 </div>
 

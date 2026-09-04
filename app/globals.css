@@ -298,6 +298,11 @@ a {
   margin-bottom: 1.5rem;
 }
 
+.about-text strong {
+  color: var(--text-primary);
+  font-weight: 900;
+}
+
 .skills-section {
   margin-top: 2rem;
 }

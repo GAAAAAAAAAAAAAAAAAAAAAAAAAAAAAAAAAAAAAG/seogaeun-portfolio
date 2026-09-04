@@ -179,9 +179,9 @@ const projectsData = [
     genre: "영상형 시뮬레이션 / PC",
     duration: "2026.07.24 ~ 2026.07.26",
     teamSize: "4인 프로젝트",
-    role: "메인 기획 및 시나리오 작성, 디자인, 미니 게임 개발, 실사 영상 연기 및 QA 담당",
-    github: "",
-    playLink: "",
+    role: "메인 기획 및 시나리오 작성, 디자인, 미니 게임 개발, 실사 영상 연기, Suno AI를 활용한 BGM 제작, 플레이 테스트 및 버그 수정 담당",
+    github: "https://github.com/Bazzi4263/MyFirst3D",
+    playLink: "https://youtu.be/H6Mu9AAfaFk",
     image: "/projects/jamitnex/logo.png",
     details: {
       genre: "영상형 시뮬레이션 / PC",
@@ -191,8 +191,13 @@ const projectsData = [
         "2026 재밌넥 게임잼 프로젝트 출품",
         "STT 및 LLM 기술을 활용한 텍스트/음성 기반 상호작용형 영상 연애 시뮬레이션 개발"
       ],
-      techStack: ["Unity", "STT", "LLM"],
-      githubLinks: [],
+      techStack: ["Unity", "STT", "LLM", "Suno AI"],
+      githubLinks: [
+        "https://github.com/Bazzi4263/MyFirst3D"
+      ],
+      playLinks: [
+        { name: "플레이 영상", url: "https://youtu.be/H6Mu9AAfaFk" }
+      ],
       reportFile: "/projects/jamitnex/jamitnex.zip",
       reportFileName: "재밌넥이라도 사랑은 하고 싶어.zip"
     }
